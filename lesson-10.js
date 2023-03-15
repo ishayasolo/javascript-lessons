@@ -61,6 +61,8 @@ const peopleData = [
 ];
 console.log(peopleData[0].score)
 
+// exercise
+// debug this function
 function add20ToScore(person) {
 	return person.score + 20
 }
