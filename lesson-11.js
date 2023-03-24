@@ -27,6 +27,17 @@ const peopleData = [
   },
 ];
 
+let newArrayOfPeople = []
+
+for (let index = 0; index < peopleData.length; index++) {
+	newArrayOfPeople.push({
+		...peopleData[index],
+		score: peopleData[index].score + 20
+	})
+}
+
+console.log(newArrayOfPeople);
+
 const scores = [20, 40, 55]
 
 // JSON.stringify(object)
@@ -34,7 +45,7 @@ const scores = [20, 40, 55]
 // exercise - add 20 to the each person's score
 
 // debug this function
-function add20ToScore(person) {
+const add20ToScore = (person) => {
   return {
 		...person,
 		score: person.score + 20
@@ -49,6 +60,8 @@ console.log(add20ToScore({
 	score: 60,
 	transactionLimit: 100000,
 }))
+
+console.log(peopleData)
 
 // expected output
 // [
