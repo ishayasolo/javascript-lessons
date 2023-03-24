@@ -1,4 +1,5 @@
 // RECAP OF LAST LESSON
+
 // two very important array methods
 // - .map()
 // returns a brand new array with each array item
@@ -103,3 +104,14 @@ const totalData = {
 }
 
 console.log(totalData)
+
+
+// EXERCISES
+
+// 1. given the array [60, 65, 70, 33, 15] use .map() to return a new array with 20 added to each number  
+// 2. given the array [
+//	{ name: "Ishaya", salary: "500" }, 
+//	{ name: "Favour", salary: "600" }, 
+//	{ name: "Timothy", salary: "450" }, 
+// ]
+//  return a new array and subtract 120 from each salary
