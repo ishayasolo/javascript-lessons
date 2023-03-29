@@ -82,3 +82,6 @@ const employees = [
 // return a new array that filter employees who do not have an ID card or employment letter
 // write your implementation down here
 
+const filterUnserious = employee => employee.hasIdCard || employee.hasEmploymentLetter
+const seriousPeople = employees.filter(filterUnserious)
+console.log(seriousPeople)
