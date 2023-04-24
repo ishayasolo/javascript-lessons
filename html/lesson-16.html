@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- use of event handlers on the elements -->
+    <button onclick="alert('you clicked me!')">Click Me</button>
+
+    <!-- using a function to handle multiple actions -->
+    <button onclick="handleButtonClick()">Click Me</button>
+    <!--
+			const handleButtonClick = () => {
+				console.log('--------------------------')
+				console.log('you just clicked a button!');
+				console.log('--------------------------')
+				alert('this alert came from the button you clicked!');
+			};
+		-->
+
+    <!-- using event listeners -->
+    <button id="clickie">Click Me</button>
+    <!--
+			const button = document.getElementById("clickie");
+
+			// button.onclick = handleButtonClick;
+			button.onclick = () => alert('third button');
+
+			button.addEventListener('click', handleButtonClick);
+		-->
+
+    <input type="text" id="name" />
+    <p id="textValue1"></p>
+    <p id="textValue2"></p>
+    <!--
+			const textInput = document.querySelector('#name');
+			const textValue1 = document.querySelector('#textValue1')
+			const textValue2 = document.querySelector('#textValue2')
+			// innerHTML - allows you to type semantic html into your node
+			// innerText - allows you to type only plain text into your node
+
+			textInput.addEventListener('focus', () => {
+				console.log('you have focused on the text input');
+			})
+
+			textInput.addEventListener('change', (event) => {
+				console.log('you made a change to the input');
+				textValue1.innerHTML = `<h1>${event.target.value}</h1>`
+				textValue2.innerText = event.target.value
+			})
+
+			textInput.addEventListener('blur', () => {
+				console.log('you have left the text input you were typing in');
+			})
+		-->
+
+		<div id="buttonParent">
+			<button id="1" value="Button 1">Button 1</button>
+			<button id="2" value="Button 2">Button 2</button>
+			<button id="3" value="Button 3">Button 3</button>
+			<button id="4" value="Button 4">Button 4</button>
+			<button id="5" value="Button 5">Button 5</button>
+			<button id="6" value="Button 6">Button 6</button>
+			<button id="7" value="Button 7">Button 7</button>
+			<button id="8" value="Button 8">Button 8</button>
+			<button id="9" value="Button 9">Button 9</button>
+			<button id="10" value="Button 10">Button 10</button>
+		</div>
+
+		<!--
+			const buttonParent = document.getElementById('buttonParent');
+			const arrayOfButtons = buttonParent.querySelectorAll('button')
+
+			for (let i = 0; i < arrayOfButtons.length; i++) {
+				arrayOfButtons[i].addEventListener('click', (event) => {
+					console.log({
+						id: event.target.id,
+						value: event.target.value,
+					})
+				})
+			}
+		-->
+
+    <script src="../lesson-16.js"></script>
+  </body>
+</html>
